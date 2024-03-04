@@ -1,0 +1,43 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Programm {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner scan = new Scanner(System.in);
+		
+		List<String> list = new ArrayList<>();
+		
+		// Add types
+		list.add("Matheus Erick Barros");
+		list.add(0, "Bruna de Oliveira Jereissati");
+		list.add("Maria Margarida Justino");
+		list.add("Gilberto Ferreira de Medeiros");
+		list.addAll(list);
+		
+		// Remove types
+		list.remove(2);
+		list.removeIf(x -> x.charAt(0) == 'G');
+		list.removeIf(x -> x == "Maria Margarida Justino");
+		
+		// Remove duplicates
+		for(int i = 0; i < list.size() - 1; i++) {
+			for(int j = 0; j < list.size() - 1 - i; j++)
+				if(list.indexOf((Object) i) == list.indexOf((Object) j)) {
+					list.remove(i);
+				}
+		}
+		
+		
+		
+		System.out.println(list);
+		
+		scan.close();
+	}
+
+}

@@ -1,0 +1,27 @@
+package entities;
+
+public class EmployeeCorporation {
+	private Integer id;
+	private String name;
+	private Double salary;
+	
+	public EmployeeCorporation(Integer id, String name, Double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	
+	public Integer getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public Double getSalary() {
+		return salary;
+	}
+	
+}

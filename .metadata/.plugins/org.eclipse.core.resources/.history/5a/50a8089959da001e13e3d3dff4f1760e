@@ -1,0 +1,28 @@
+package application;
+
+import java.time.Instant;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Comment;
+import entities.Post;
+
+public class Activ2 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner scan = new Scanner(System.in);
+
+		Post post = new Post(Date.from(Instant.now()), "Traveling to New Zealand",
+				"I'm going to visit this wonderful country", 12);
+
+		post.addComments(new Comment("comment1"));
+		post.addComments(new Comment("comment2"));
+		
+		System.out.println(post);
+
+		scan.close();
+	}
+
+}

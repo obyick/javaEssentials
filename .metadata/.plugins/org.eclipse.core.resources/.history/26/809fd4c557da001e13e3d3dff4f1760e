@@ -1,0 +1,23 @@
+package application;
+
+import java.time.Instant;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Post;
+
+public class Activ2 {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner scan = new Scanner(System.in);
+		
+		Post post = new Post(Date.from(Instant.now()), "Traveling to New Zealand", "oi", 2);
+		
+		System.out.println(post.getMoment());
+
+		scan.close();
+	}
+
+}

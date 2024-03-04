@@ -1,0 +1,32 @@
+package application;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class programm {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner scan = new Scanner(System.in);
+
+		// Local
+		System.out.println(LocalDateTime.now());
+
+		// Local
+		System.out.println(LocalDate.now());
+
+		// GMT
+		System.out.println(Instant.now());
+
+		// GMT
+		System.out.println(LocalDate.parse("2000-07-20"));
+
+//		LocalDate date = Instant.now() - LocalDateTime.now();
+
+		scan.close();
+	}
+
+}

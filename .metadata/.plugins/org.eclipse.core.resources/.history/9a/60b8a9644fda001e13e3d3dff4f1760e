@@ -1,0 +1,22 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Worker;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner scan = new Scanner(System.in);
+
+		Worker worker = new Worker("Matheus Erick Barros Costa Dias da Silva", "Senior", 3865.12, "Engenharia de Computação e Automação");
+		
+		// Contracts data
+		int contractNumber = 3;
+		
+		scan.close();
+	}
+
+}

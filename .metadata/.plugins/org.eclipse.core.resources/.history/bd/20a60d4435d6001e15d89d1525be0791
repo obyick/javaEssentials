@@ -1,0 +1,36 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Programm {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter row's quantity: ");
+		int row = scan.nextInt();
+		
+		System.out.println("Enter column's quantity: ");
+		int column = scan.nextInt();
+		
+		int[][] matrix = new int[row][column];
+		
+		for(int i = 0; i < row; i++) {
+			for(int j = 0; j < column; j++) {
+				matrix[i][j] = scan.nextInt();
+			}
+		}
+		
+		for(int[] line : matrix) {
+			for(int element : line) {
+			System.out.println(element + " ");
+			}
+			System.out.println();
+		}
+
+		scan.close();
+	}
+
+}
